@@ -1,0 +1,44 @@
+---
+# A list of data types
+# !!<datatype> providing an explict data type for the value
+
+# Boolean:
+boolExample1: true    # Also True, TRUE
+boolExample2: false   # Also False, FALSE
+boolExample3: yes     # Also Yes, YES, y, Y
+boolExample4: no      # Also No, NO, n, N
+boolExample5: on      # Also On, ON
+boolExample6: off     # Also Off, OFF
+
+# Date:
+dateExample: 2015-04-05
+
+# Float
+floatExample1: 123.0
+floatExample2: 1.23e+2
+
+# Integer
+intExample1: 123
+intExample2: !!int 123
+
+# Strings
+strExample1: A string value supporting don't
+strExample2: "A string value supporting don't"
+strExample3: 'A string value supporting don''t'
+strExample4: !!str A string value supporting don't
+
+# Multiline strings
+mlExample1: |
+  This is a string
+  that can span many lines
+  and will keep all newlines.
+
+  Including air.
+
+mlExample2: >
+  This is a string
+  where all newlines will
+  be removed.
+
+  However, this line will
+  appear on a separate line.

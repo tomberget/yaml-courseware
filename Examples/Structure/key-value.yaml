@@ -1,0 +1,18 @@
+---
+pizzaStore: "No 1. Pizza"
+pizza:
+  name: "Hot Tempered"
+  strength:
+    - Jalapeño
+    - Habanero
+    - Ghost Pepper
+
+---
+pizzaStore: "No 1. Pizza"
+pizza:
+  name: "Hot Tempered"
+  strength: ["Jalapeño", "Habanero", "Ghost Pepper"]
+
+---
+pizzaStore: "No 1. Pizza"
+pizza: {name: "Hot Tempered", strength: ["Jalapeño", "Habanero", "Ghost Pepper"]}

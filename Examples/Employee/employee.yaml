@@ -1,0 +1,17 @@
+---
+employeeRecords:
+  employee:
+    - id: 001
+      first_name: Tom Stian
+      last_name: Berget
+      job: Plaform Engineer
+      skills:
+        - yaml
+        - json
+    - id: 002
+      first_name: Stian Berget
+      last_name: Tom
+      job: Engineer
+      skills:
+        - xml
+        - css

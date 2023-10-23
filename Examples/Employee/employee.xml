@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<employeeRecords>
+  <employee id="001">
+    <first_name>Tom Stian</first_name>
+    <last_name>Berget</last_name>
+    <job>Platform Engineer</job>
+    <skills>yaml, json</skills>
+  </employee>
+  <employee id="002">
+    <first_name>Stian Berget</first_name>
+    <last_name>Tom</last_name>
+    <job>Engineer</job>
+    <skills>xml, css</skills>
+  </employee>
+</employeeRecords>

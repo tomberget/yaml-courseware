@@ -1,0 +1,10 @@
+---
+street: &street "Ullernchausseen 123, H0203"
+
+fullAddress:
+  street: *street
+  zip: "0379"
+  city: Oslo
+  country: Norway
+
+realStreet: *street

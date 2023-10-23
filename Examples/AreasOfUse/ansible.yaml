@@ -1,0 +1,24 @@
+---
+- name: "Baseline setup"
+  hosts: "windows"
+  collections:
+  - ansible.builtin
+  - ansible.windows
+  - community.windows
+  gather_facts: no
+
+  vars_files:
+  - ../../vars/windows_defaults.yaml
+  - ../../vars/windows_vars_test.yaml
+
+  vars:
+    ansible_password: "{{ super_secret }}"
+
+  tasks:
+  # Make sure locale is set to nb-NO
+  - name: "Get current location"
+    win_shell: (Get-WinHomeLocation).GeoId
+    register: current_server_location
+  - name: "Set format, location and unicode to Norwegian and copy settings"
+    community.windows.win_region:
+      location: 177

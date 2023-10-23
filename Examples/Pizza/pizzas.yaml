@@ -1,0 +1,23 @@
+---
+store: "Worlds #1 Pizza"
+date: 2023-10-24
+pizzaOrder:
+  - name: "Ei krasafaren steinbu"
+    quantity: 2
+    topping:
+      - tomatsaus
+      - chiliflak
+      - norvegia
+      - jarlsberg
+      - mozarella
+      - entrecôte
+      - tyttebær
+  - name: "Sveitservilla"
+    quantity: 1
+    topping:
+      - bianco
+      - mozarella
+      - kylling
+      - pinjekjerner
+      - tomat
+      - grønne greier

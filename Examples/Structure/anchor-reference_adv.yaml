@@ -1,0 +1,31 @@
+---
+invoiceAddress: &adr1
+  street: |
+    Ullernchausseen 123,
+    H0203
+  zip: "0379"
+  city: Oslo
+  country: Norway
+
+# På denne måten er det ikke mulig å endre
+# på verdiene.
+deliveryAddress: *adr1
+
+---
+invoiceAddress: &adr1
+  street: |
+    Ullernchausseen 123,
+    H0203
+  zip: "0379"
+  city: Oslo
+  country: Norway
+
+# På denne måten kan man endre
+# på verdiene. De nøklene som
+# ikke blir endret, beholder
+# sin informasjon
+deliveryAddress:
+  <<: *adr1
+  street: |
+    Johan Scharffenbergs vei 42
+  zip: "0694"
