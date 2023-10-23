@@ -60,9 +60,44 @@ description: |
   that spans multiple lines.
 ```
 
+```yaml
+description: >
+  While this is a long description
+  that will fold into one line.
+
+  But this line will be on its own.
+```
+
 ## Scalar Data Types
 
 YAML supports various scalar data types, including strings, integers, floats, booleans, and nulls.
+
+```yaml
+# Boolean:
+boolExample1: true    # Also True, TRUE
+boolExample2: false   # Also False, FALSE
+boolExample3: yes     # Also Yes, YES, y, Y
+boolExample4: no      # Also No, NO, n, N
+boolExample5: on      # Also On, ON
+boolExample6: off     # Also Off, OFF
+
+# Date:
+dateExample: 2015-04-05
+
+# Float
+floatExample1: 123.0
+floatExample2: 1.23e+2
+
+# Integer
+intExample1: 123
+intExample2: !!int 123
+
+# Strings
+strExample1: A string value supporting don't
+strExample2: "A string value supporting don't"
+strExample3: 'A string value supporting don''t'
+strExample4: !!str A string value supporting don't
+```
 
 ## Support for Anchors & Aliases
 
@@ -90,6 +125,18 @@ Unlike some formats, you don't need a special character or set of characters to 
 ## Support for multiple documents
 
 You can have multiple YAML documents in a single file, separated by ---.
+
+It is also best practice to start a YAML document using the document separator, like this:
+
+```yaml
+---
+and:
+  here:
+    we:
+      - "go"
+      - "go"
+      - "go"
+```
 
 ## Strict Syntax
 
