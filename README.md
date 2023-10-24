@@ -54,11 +54,45 @@ key: value # This is also a comment
 
 YAML provides ways to denote multi-line strings, either with the | (keep newlines) or > (fold newlines) characters.
 
+### Be Cautious with Multi-Line Strings
+
+Since YAML provides multiple ways to handle multi-line strings it is important to understand their differences:
+
+`|` keeps newlines.
+`|-` trims the trailing newline.
+`>` folds newlines to spaces.
+`>-` folds newlines to spaces and trims the trailing newline.
+
 ```yaml
 description: |
   This is a long description
   that spans multiple lines.
+  But it has a trailing newline.
 ```
+
+> *Result*
+>
+> ```text
+> This is a long description
+> that spans multiple lines.
+> But it has a trailing newline.
+>
+> ```
+
+```yaml
+description: |-
+  This is a long description
+  that spans multiple lines.
+  With no trailing newline.
+```
+
+> *Result*
+>
+> ```text
+> This is a long description
+> that spans multiple lines.
+> With no trailing newline.
+> ```
 
 ```yaml
 description: >
@@ -66,7 +100,32 @@ description: >
   that will fold into one line.
 
   But this line will be on its own.
+  With a trailing newline.
 ```
+
+> *Result*
+>
+> ```Text
+> While this is a long description that will fold into one line.
+> But this line will be on its own. With a trailing newline.
+>
+> ```
+
+```yaml
+description: >-
+  While this is a long description
+  that will fold into one line.
+
+  But this line will be on its own.
+  With no trailing newline.
+```
+
+> *Result*
+>
+> ```text
+> While this is a long description that will fold into one line.
+> But this line will be on its own. With no trailing newline.
+> ```
 
 ## Scalar Data Types
 
