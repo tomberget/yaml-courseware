@@ -246,6 +246,10 @@ addresses:
 
 In the computing world, YAML is often used in configuration files, Kubernetes definitions, Ansible playbooks, and more. It's essential to handle YAML with care due to its whitespace sensitivity, but its readability makes it a popular choice for many applications.
 
+### The YAML specification
+
+The current YAML specification can be found at [yaml.org](https://yaml.org/spec/1.2.2/). This can be helpful if you are looking into deep diving into YAML, or just need to understand it (or sections of it) better.
+
 ## Supporting systems
 
 ### Visual Studio Code
@@ -299,7 +303,3 @@ As an example, let us retrieve the `city` value from the `invoiceAddress` node f
 ```sh
 yq -e '.invoiceAddress.city' Examples/Pizza/pizzas-address.yaml
 ```
-
-### The YAML specification
-
-The current YAML specification can be found at [yaml.org](https://yaml.org/spec/1.2.2/). This can be helpful if you are looking into deep diving into YAML, or just need to understand it (or sections of it) better.
