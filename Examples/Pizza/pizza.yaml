@@ -5,10 +5,10 @@ pizzaOrder:
   name: "Ei krasafaren steinbu"
   quantity: 2
   topping:
-    - tomatsaus
-    - chiliflak
-    - norvegia
-    - jarlsberg
-    - mozarella
-    - entrecôte
-    - tyttebær
+    - "tomatsaus"
+    - "chiliflak"
+    - "norvegia"
+    - "jarlsberg"
+    - "mozarella"
+    - "entrecôte"
+    - "tyttebær"

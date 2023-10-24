@@ -1,4 +1,5 @@
 ---
+# NO is evaluated as `false`, and the web application failed.
 countries:
 - GB
 - IE
@@ -7,9 +8,11 @@ countries:
 - NO
 
 ---
+# By quoting, "NO" is evaluated as the string NO
+# --> no web application failure
 countries:
-- GB
-- IE
-- FR
-- DE
+- "GB"
+- "IE"
+- "FR"
+- "DE"
 - "NO"

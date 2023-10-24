@@ -1,5 +1,5 @@
 ---
 # Order a pizza
 pizza:
-  name: Pepperoni  # The name of the pizza selected
+  name: "Pepperoni"  # The name of the pizza selected
   deliveryDescription: "Call system to enter the building is activated by the #-symbol"

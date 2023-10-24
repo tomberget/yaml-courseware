@@ -4,11 +4,11 @@ invoiceAddress: &adr1
     Ullernchausseen 123,
     H0203
   zip: "0379"
-  city: Oslo
-  country: Norway
+  city: "Oslo"
+  country: "Norway"
 
-# På denne måten er det ikke mulig å endre
-# på verdiene.
+# By referencing this way, it is not possible
+# to change the values.
 deliveryAddress: *adr1
 
 ---
@@ -20,12 +20,21 @@ invoiceAddress: &adr1
   city: Oslo
   country: Norway
 
-# På denne måten kan man endre
-# på verdiene. De nøklene som
-# ikke blir endret, beholder
-# sin informasjon
+# By merge referencing (`<<: `) you can
+# overwrite values.
 deliveryAddress:
   <<: *adr1
   street: |
     Johan Scharffenbergs vei 42
   zip: "0694"
+
+# Note that placement of the merge is not
+# important, as long as it is in the same
+# structure.
+# However, it is best practice to lead with
+# the reference - as done in the example above.
+homeAddress:
+  street: |
+    Johan Scharffenbergs vei 42
+  zip: "0694"
+  <<: *adr1
