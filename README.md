@@ -28,9 +28,9 @@ Lists are created using hyphens:
 
 ```yaml
 fruits:
-  - Apple
-  - Banana
-  - Cherry
+  - "Apple"
+  - "Banana"
+  - "Cherry"
 ```
 
 ## Maps/Dictionaries
@@ -39,7 +39,7 @@ Use key-value pairs within indents:
 
 ```yaml
 person:
-  name: John
+  name: "John"
   age: 30
 ```
 
@@ -54,7 +54,7 @@ key: value # This is also a comment
 
 ## Multi-line Strings
 
-YAML provides ways to denote multi-line strings, either with the | (keep newlines) or > (fold newlines) characters.
+YAML provides ways to denote multi-line strings, either with the | (keep newlines) or > (fold newlines) characters. It is important that once a multi-line has been denoted, you are not to wrap the string using `"`-s or `'`-s. Everything that belongs to the `|` or `>` are evaluated as text.
 
 ### Be Cautious with Multi-Line Strings
 
@@ -165,19 +165,21 @@ strExample4: !!str A string value supporting don't
 This allows for creating references in the YAML document, so you don't have to duplicate data. For example:
 
 ```yaml
-default: &DEFAULT
-  name: Default Name
-  age: 20
-
-person1:
-  <<: *DEFAULT
-  name: Alice
-
-person2:
-  <<: *DEFAULT
+homeAddress: &homeAddr
+  street: "Henrik Ibsens gate 1"
+  zipcode: "0255"
+  city: "Oslo"
+  country: "Norway"
+invoiceAddress:
+  <<: *homeAddr
+  street: "Karl Johans gate 22"
+  zipcode: "0026"
+deliveryAddress: *homeAddr
 ```
 
-In the above example, both person1 and person2 will have age: 20 from the DEFAULT anchor, but person1 has a custom name.
+In the above example, both `invoiceAddress` and `deliveryAddress` reuse the `homeAddress` structure and values.
+
+For the `invoiceAddress`, we use *merge reference* to the anchor `&homeAddr` in order to set new `street` and `zipcode` values. `city` and `country`, which are not overwritten, will still reference the anchor values.
 
 ### Verifying that anchors and references work
 
@@ -228,14 +230,14 @@ YAML can be error-prone due to its reliance on indentation. A misplaced space ca
 Here's a brief example of a YAML file:
 
 ```yaml
-name: John Doe
+name: "Tom Berget"
 age: 30
 is_student: false
 addresses:
-  - city: New York
-    zip: "10001"
-  - city: Los Angeles
-    zip: "90001"
+  - city: Oslo
+    zip: "0123"
+  - city: Oslo
+    zip: "0124"
 ```
 
 In the computing world, YAML is often used in configuration files, Kubernetes definitions, Ansible playbooks, and more. It's essential to handle YAML with care due to its whitespace sensitivity, but its readability makes it a popular choice for many applications.
