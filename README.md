@@ -299,3 +299,7 @@ As an example, let us retrieve the `city` value from the `invoiceAddress` node f
 ```sh
 yq -e '.invoiceAddress.city' Examples/Pizza/pizzas-address.yaml
 ```
+
+### The YAML specification
+
+The current YAML specification can be found at [yaml.org](https://yaml.org/spec/1.2.2/). This can be helpful if you are looking into deep diving into YAML, or just need to understand it (or sections of it) better.
