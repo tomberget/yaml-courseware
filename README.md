@@ -51,8 +51,10 @@ Anything after a `# ` is considered a comment.
 
 ```yaml
 # This is a comment
-key: value # This is also a comment
+key: value  # This is also a comment
 ```
+
+Please note that *yamllint* insist that you should use a double space between the end of a value, and it's comment, when the comment is placed at the end of a line.
 
 ### Multi-line Strings
 
