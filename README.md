@@ -179,6 +179,28 @@ person2:
 
 In the above example, both person1 and person2 will have age: 20 from the DEFAULT anchor, but person1 has a custom name.
 
+### Verifying that anchors and references work
+
+It is not possible to see directly in the YAML file that the anchors and references work like intended. To easily validate, you can make use of YAML Query (yq), which is available [here](https://mikefarah.gitbook.io/yq/).
+
+Once installed, you can convert the file from YAML to JSON, and then back again to YAML - in order to get the human readable output. The difference can be seen by yourself like this:
+
+> **The raw YAML output**
+>
+> This is no different than viewing the file in a text editor.
+>
+> ```sh
+> yq -e '.' Examples/Pizza/pizzas-address.yaml
+> ```
+
+When converting it to JSON and back:
+
+> **Processed YAML output**
+>
+> ```sh
+> yq -o=json Examples/Pizza/pizzas-address.yaml | yq -P -
+> ```
+
 ## No explicit ending delimiter
 
 Unlike some formats, you don't need a special character or set of characters to indicate the end of a YAML document.
