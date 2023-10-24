@@ -1,16 +1,18 @@
-# Introduction
+# YAML Courseware
+
+## Introduction
 
 YAML stands for "YAML Ain't Markup Language" (a recursive acronym) or sometimes "Yet Another Markup Language". It's a human-readable data serialization format, often used for configuration files and data interchange between languages with different data structures. YAML is to JSON what markdown is to HTML: a simpler way to write structured data that gets converted into a more complex format.
 
 Here are the main characteristics and features of the YAML format:
 
-> **Human-readable**
->
-> One of the goals of YAML is to be easily readable by humans, which means it's often favored for configuration files where manual edits might be necessary.
->
-> **Indentation**
->
-> The structure of a YAML document is determined by indentation using spaces (not tabs!). This is similar to how Python determines block structure.
+### Human-readable
+
+One of the goals of YAML is to be easily readable by humans, which means it's often favored for configuration files where manual edits might be necessary.
+
+### Indentation
+
+The structure of a YAML document is determined by indentation using spaces (not tabs!). This is similar to how Python determines block structure.
 
 ## Key-Value Pairs
 
