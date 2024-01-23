@@ -282,9 +282,9 @@ The *VS Code* extension for yamllint is an extension that support linting for mu
 
 There is a default ruleset that *yamllint* will use in order to validate YAML files. By adding a `.yamllint` file to the root of your repository, you can globally change how, and for what, the linter should report errors or warnings. A more relaxed example file can be found at the root in this repo at [.yamllint](/.yamllint).
 
-### yq
+### YAML Query (yq)
 
-[yq](https://mikefarah.gitbook.io/yq/) is a lightweight and portable command-line YAML processor. Using this tool, you can easily query YAML files for content, or convert YAML -> JSON -> YAML in order to see what values are actually used. When dealing with anchors and references, this is an easy way to validate the YAML values.
+[YAML Query](https://mikefarah.gitbook.io/yq/) (yq) is a lightweight and portable command-line YAML processor. Using this tool, you can easily query YAML files for content, or convert YAML -> JSON -> YAML in order to see what values are actually used. When dealing with anchors and references, this is an easy way to validate the YAML values.
 
 #### Convert YAML -> JSON -> YAML
 
