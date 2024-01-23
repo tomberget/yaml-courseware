@@ -4,7 +4,7 @@ employeeRecords:
     - id: 0
       first_name: "Tom Stian"
       last_name: "Berget"
-      job: "Plaform Engineer"
+      job: "Platform Engineer"
       skills:
         - "yaml"
         - "json"

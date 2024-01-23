@@ -17,8 +17,8 @@ invoiceAddress: &adr1
     Ullernchausseen 123,
     H0203
   zip: "0379"
-  city: Oslo
-  country: Norway
+  city: "Oslo"
+  country: "Norway"
 
 # By merge referencing (`<<: `) you can
 # overwrite values.

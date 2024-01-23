@@ -23,8 +23,7 @@ rules:
     level: warning
     indent-sequences: consistent
   line-length:
-    max: 80
+    max: 100
     level: warning
     allow-non-breakable-inline-mappings: true
-  truthy:
-    level: warning
+  truthy: disable
