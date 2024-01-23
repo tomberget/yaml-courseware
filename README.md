@@ -196,7 +196,7 @@ Once installed, you can convert the file from YAML to JSON, and then back again 
 > This is no different than viewing the file in a text editor.
 >
 > ```sh
-> yq -e '.' Examples/Pizza/pizzas-address.yaml
+> yq -e '.' Examples/Pizza/03-pizzas-addresses.yaml
 > ```
 
 When converting it to JSON and back:
@@ -204,7 +204,7 @@ When converting it to JSON and back:
 > **Processed YAML output**
 >
 > ```sh
-> yq -o=json Examples/Pizza/pizzas-address.yaml | yq -P -
+> yq -o=json Examples/Pizza/03-pizzas-addresses.yaml | yq -P -
 > ```
 
 ### No explicit ending delimiter
@@ -238,9 +238,9 @@ name: "Tom Berget"
 age: 30
 is_student: false
 addresses:
-  - city: Oslo
+  - city: "Oslo"
     zip: "0123"
-  - city: Oslo
+  - city: "Oslo"
     zip: "0124"
 ```
 
@@ -288,18 +288,18 @@ There is a default ruleset that *yamllint* will use in order to validate YAML fi
 
 #### Convert YAML -> JSON -> YAML
 
-Converting from YAML to JSON to YAML is a way to check that the YAML structure, keys and values, are as you expect. In this example, we convert the [pizzas-address.yaml](/Examples/Pizza/pizzas-address.yaml) file to check that Anchor/Reference work as expected.
+Converting from YAML to JSON to YAML is a way to check that the YAML structure, keys and values, are as you expect. In this example, we convert the [03-pizzas-addresses.yaml](/Examples/Pizza/03-pizzas-addresses.yaml) file to check that Anchor/Reference work as expected.
 
 ```sh
-yq -o=json Examples/Pizza/pizzas-address.yaml | yq -P -
+yq -o=json Examples/Pizza/03-pizzas-addresses.yaml | yq -P -
 ```
 
 #### Querying a YAML file
 
 It is possible to query a YAML file, to check that the path is correct, and that the data at that path is correct. It is important to know that a query string *always* start with a single `.`, to reference the root of the YAML document.
 
-As an example, let us retrieve the `city` value from the `invoiceAddress` node from the same [pizzas-address.yaml](/Examples/Pizza/pizzas-address.yaml) as used above:
+As an example, let us retrieve the `city` value from the `invoiceAddress` node from the same [03-pizzas-addresses.yaml](/Examples/Pizza/03-pizzas-addresses.yaml) as used above:
 
 ```sh
-yq -e '.invoiceAddress.city' Examples/Pizza/pizzas-address.yaml
+yq -e '.invoiceAddress.city' Examples/Pizza/03-pizzas-addresses.yaml
 ```
